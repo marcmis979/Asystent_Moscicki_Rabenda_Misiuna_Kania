@@ -38,7 +38,7 @@
         <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
             <StackPanel Grid.Column="2"  Margin="9,9,7,3" Grid.Row="1" Background="White">
                 <Label Content="Badania Wątroby" Background="#49a7cc"/>
-                <Label Content="45zł"/>
+                <Label Content="55zł"/>
             </StackPanel>
         </Border>
         <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
