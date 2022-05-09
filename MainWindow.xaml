@@ -1,0 +1,171 @@
+﻿<Window x:Class="Panel_Gościa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panel_Gościa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        MinHeight="500"
+        MinWidth="800"
+        >
+
+    <Grid Background="#F1F6F9" AutomationProperties.IsOffscreenBehavior="Onscreen" MinHeight="400" MinWidth="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#e1f5fe"
+            Grid.ColumnSpan="4"
+            MouseDown="Grid_MouseDown" RenderTransformOrigin="0.5,0.5" Height="43" VerticalAlignment="Top">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Witamy w Laboratorium Medicus!" x:Name="lblBaner"
+                   FontSize="20" FontWeight="Bold" 
+               Foreground="#FF0E273C" 
+               Grid.Column="0" Margin="10,4,2,0" Grid.ColumnSpan="3" Height="37" VerticalAlignment="Top"/>
+
+            <Button Content="Zaloguj się" x:Name="btnLogin"
+                HorizontalAlignment="Right"
+                Width="250"
+                FontWeight="Medium" Foreground="black" 
+                
+                Grid.Column="3" Grid.ColumnSpan="2" Margin="0,-30,60,-27" Click="btnLogin_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Background" Value="#49a7cc"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" Value="#b5ffff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Zarejestruj się" x:Name="btnRegister"
+                Foreground="#FF0E273C" FontWeight="Medium"
+                Grid.Column="3" Grid.ColumnSpan="4" Margin="185,-30,-35,-27" Click="btnRegister_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Background" Value="#80d8ff"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" Value="#b5ffff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="X" x:Name="btnClose" 
+                VerticalAlignment="Top" Height="22"
+                FontSize="16" 
+                Foreground="black" FontWeight="Bold"
+                
+                Click="btnClose_Click" 
+                Grid.Column="6" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Background" Value="#49a7cc"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" Value="red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                                
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="_" x:Name="btnMinimalize"
+                FontSize="16" 
+                Foreground="black" FontWeight="Bold"
+                
+                Click="btnMinimalize_Click" 
+                Grid.Column="5" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Height="22" VerticalAlignment="Top" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Background" Value="#49a7cc"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background"  Value="#b5ffff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                                
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <Frame x:Name="Main"  Grid.Row="1" Grid.ColumnSpan="4" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="btnMore" Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Left" Margin="75,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="115" Foreground="#49a7cc" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Click="btnMore_Click" />
+
+
+    </Grid>
+</Window>
